@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/fontawesome.min.css" />
+    <link rel="stylesheet" href="./css/animate.min.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <section class="py-5 my-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class = "col-md-4 py-4 text-center" style="background-color: #dc10ff; border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+            <h5 class="text-uppercase text-light ">Calculate your idea.</h5>
+            <img src="./images/cal.png" class="pt-3 coverImage animated jello" style="width: 300px ;height: 350px;" >
+            <p style="font-size: 14px; color:lightgray">If you wanna calculate your daily tiney problem . You can use this calculator . I hope you will be some benefited .</p>
+          </div>
+          <div class="col-md-4" >
+
+           
+            <div class="wrapper text-center">
+              <form class="py-4 px-4" action="" id="Calculator" name="calculator">
+                <h6 style="font-size: 20px; text-transform: uppercase; color:#fff; margin-bottom: 10px;">Simple Calculator</h6>
+                <input class="form-control p-4 text-right" type="text" id="printScreen" disabled name="printScreen" />
+                <hr />
+
+
+
+
+
+                <div class="wrap">
+                  <input type="button" value="&radic;" class="btn btn-light" onclick="calculator.printScreen.value = Math.sqrt(calculator.printScreen.value)" />
+                  <input type="button" value="CE" class="btn btn-light" onclick="calculator.printScreen.value = '' "/>
+                  <input type="button" value="C" class="btn btn-light" onclick="calculator.printScreen.value = '' " />
+                  <input type="button" value="&larr;" class="btn btn-light" onclick="calculator.printScreen.value = calculator.printScreen.value.slice(0,-1) " />
+                  <input type="button" value="7" class="btn btn-light" onclick="calculator.printScreen.value += '7' " />
+                  <input type="button" value="8" class="btn btn-light" onclick="calculator.printScreen.value += '8' "/>
+                  <input type="button" value="9" class="btn btn-light" onclick="calculator.printScreen.value += '9' " />
+                  <input type="button" value="&plus;" class="btn btn-light" onclick="calculator.printScreen.value += '+' "  />
+                  <input type="button" value="4" class="btn btn-light" onclick="calculator.printScreen.value += '4' "/>
+                  <input type="button" value="5" class="btn btn-light" onclick="calculator.printScreen.value += '5' "/>
+                  <input type="button" value="6" class="btn btn-light" onclick="calculator.printScreen.value += '6' "/>
+                  <input type="button" value="&minus;" class="btn btn-light" onclick="calculator.printScreen.value += '-' " />
+                  <input type="button" value="1" class="btn btn-light" onclick="calculator.printScreen.value += '1' "/>
+                  <input type="button" value="2" class="btn btn-light" onclick="calculator.printScreen.value += '2' "/>
+                  <input type="button" value="3"  class="btn btn-light" onclick="calculator.printScreen.value += '3' "/>
+                  <input type="button" value="*" class="btn btn-light"  onclick="calculator.printScreen.value += '*' "/>
+                  <input type="button" value="0" class="btn btn-light"  onclick="calculator.printScreen.value += '0' "/>
+                  <input type="button" value="." class="btn btn-light"  onclick="calculator.printScreen.value += '.' "/>
+                  <input type="button" value="=" class="btn btn-warning" onclick="calculator.printScreen.value = eval(calculator.printScreen.value)" />
+                  <input type="button" value="/" class="btn btn-light" onclick="calculator.printScreen.value += '/' " />
+                </div>
+              </form>
+            </div>
+
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Script -->
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery-slim.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./code.js"></script>
+  </body>
+</html>
